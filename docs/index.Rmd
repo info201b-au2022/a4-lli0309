@@ -1,7 +1,7 @@
 ---
 title: "Why Should We End Mass Incarceration?"
 author: "Linda Li"
-date: '2022-11-01'
+date: '2022-11-21'
 output: html_document
 ---
 
@@ -15,15 +15,15 @@ The U.S. has the highest incarceration rate in the world. The U.S. has arrested 
 
 
 ## Introduction 
-The U.S. is the **most incarcerated nation** in the world. Mass incarceration also has been a historic phenomenon throughout our history. Politicians started to link crime with race. Jails and prisons today are filled with people who have been targeted by **overcriminalization and racial profiling**. Our country has been overarrest people of color and poverty. Many people stay in jail because they can't afford bail. Based on _Data Feminism_, those researchers analyze and expose oppression to hold institutions accountable. The goal is to challenge the power. Therefore, it's important for us to make changes to our criminal legal system and stop unnecessary use of jails. 
+The U.S. is the **most incarcerated nation** in the world. Mass incarceration also has been a historic phenomenon throughout our history. Politicians started to link crime with race. Jails and prisons today are filled with people who have been targeted by **overcriminalization and racial profiling**. Our country has been overarresting people of color and poverty. Many people stay in jail because they can't afford bail. Based on _Data Feminism_, those researchers analyze and expose oppression to hold institutions accountable. The goal is to challenge the power. Therefore, it's important for us to **make changes to our criminal legal system and stop unnecessary use of jails**. 
 
-The direct stakeholder of this dataset are the government officials and those who are in jail due to overcriminalization. The government can better understand and improve the existing problems in criminal legal system. Those who are in jail can eventually get their rights back. The indirect stakeholder would be citizens in the U.S. By eliminating mass incarceration, we can build safer communities and gain equality for everyone. The central value is human dignity and justice since ending the unjust system can affirm human dignity and bring more justice to those minoritized groups.
+The direct stakeholder of this dataset are the government officials and those who are in jail due to overcriminalization. The government can better understand and improve the existing problems in the criminal legal system. Those who are in jail can eventually get their rights back. The indirect stakeholder would be citizens in the U.S. By eliminating mass incarceration, we can build safer communities and gain equality for everyone. The central value is **human dignity** and **justice** since ending the unjust system can affirm human dignity and bring more justice to those minoritized groups. In the report, we will explore the patterns of inequality in the prison system related to race, geography, and states.
 
 
 ## Data Summary 
-In 1990, the average value of total county population aged 15 to 64 of Black people in prison is **`r average_black()`**. This value is important because we can compare the average value of Black people to other color to see how the inequality in the prison system relates to race.
+In 1990, the average value of total county population aged 15 to 64 of Black people in prison is **`r average_black()`**. This value is important because we can compare the average value of Black people to other colored populations to see how the inequality in the prison system relates to race.
 
-The highest value of total county population aged 15 to 64 of Black people in 1990 is **`r highest_pop()`**. The lowest value of total county population aged 15 to 64 of Black people in 1990 is **`r lowest()`**. These values are essential because they can show when and where the the most value was. This relates to the area where the most patterns of inequality happened.
+The highest value of total county population aged 15 to 64 of Black people in 1990 is **`r highest_pop()`**. The lowest value of total county population aged 15 to 64 of Black people in 1990 is **`r lowest()`**. These values are essential because they can show when and where the most value was. This relates to the area where the most patterns of inequality happened.
 
 The value of total county population aged 15 to 64 of Black people has increased **`r change()`** from 1980 to 1990. This value is important because it shows how the trend of inequality increased over the 10 years.
 
@@ -32,7 +32,7 @@ The value of total county population aged 15 to 64 of Black people has increased
 plot_jail_pop_for_us()
 ```
 
-According to the bar chart, the overall pattern of U.S. prison population has **increased** greatly from 1970 to 2018. The jail population did not change much until 1980. Also, the jail population has been slowly decreasing since 2008, indicating that there can be improvement on our prison system to reduce unnecessary use of prisons. My question regarding this graph is: What are some key events that caused the great increase of jail population in U.S. since 1980?
+According to the bar chart, the overall pattern of U.S. prison population has **increased** greatly from 1970 to 2018. The jail population did not change much until 1980. Also, the jail population has been slowly decreasing since 2008, indicating that there are some improvements on our prison system that reduce unnecessary use of prisons starting in around 2008. My question regarding this graph is: Why did the total jail population suddenly increase in 1980?
 
 
 ## Growth of Prison Population by State
@@ -40,7 +40,7 @@ According to the bar chart, the overall pattern of U.S. prison population has **
 plot_jail_pop_by_states(c("WA", "CA", "FL", "NY"))
 ```
 
-According to the line chart, the overall pattern of the four states' jail population has **increased** from 1970 to 2018. California has the most jail population comparing to other states since 1970. The jail population in California started to increase dramatically since around 1978. Washington has the least jail population comparing to other states. The population almost remains the same. The jail population of New York tends to decrease since 1990. I choose the four states because California and Washington can represent the west coast while Florida and New York can represent the east coast. We can compare the prison population of different regions of the U.S. Also, they all have a big population, making the data more representative. My question regarding this graph is: What are some policies that impacted the pattern of population growth from these states?
+According to the line chart, the overall pattern of the four states' jail population has **increased** from 1970 to 2018. **California** has the most jail population compared to other states since 1970. The jail population in California started to increase dramatically around 1978. **Washington** has the least jail population compared to other states. The population almost remains the same. The jail population of New York has decreased since 1990. I chose the four states because California and Washington can represent the west coast while Florida and New York can represent the east coast. We can compare the prison population of different parts of the U.S. Also, all four states have a big population, making the data more representative. My question regarding this graph is: What are some policies that impacted the pattern of population growth from these states?
 
 
 ## Growth of Prison Population by Race and Urbanicity
@@ -48,7 +48,7 @@ According to the line chart, the overall pattern of the four states' jail popula
 plot_jail_pop_by_urbanicity("urban", "urban", "rural", "rural") 
 ```
 
-The graph shows how different race are represented in jail in rural and urban areas of the country. According to the plot, the population of Black people in prison has increased the most in urban area of the country comparing to White population. My question regarding the graph is : **Does urbanicity have an impact on the jail population?** Yes, urban areas of the country seems to imprison a lot more people than rural areas, especially black. According to the plot, the jail population also grows faster in urban area throughout history. However, there's a good sign that most population started to decrease since around 2010. 
+The graph shows how different races are represented in jail in rural and urban areas of the country. According to the plot, the population of Black people in prison has increased the most in urban areas of the country compared to White population. My question regarding the graph is: **Does urbanicity have an impact on the jail population?** Yes, urban areas of the country seem to imprison a lot more people than rural areas, especially black. According to the plot, the jail population has also grown faster in urban areas throughout history. However, there's a good sign that most of the jail population started to decrease around 2010. 
 
 
 ## County Total Black Population in Jail in California
@@ -56,6 +56,6 @@ The graph shows how different race are represented in jail in rural and urban ar
 create_map()
 ```
 
-The graph shows the total Black population in jail by counties in California from 1970 to 2018. According to the plot, the total Black Population in prison is the greatest in Los Angeles. Southern California tends to have a much greater black population in prison comparing to other area in California. The counties in the bay area also have more total black population in jail comparing to northern California. My question regarding the graph is: What are some factors that can cause the big population in these specific areas in California?
+The graph shows the total Black population in jail by counties in California from 1970 to 2018. According to the plot, the total Black Population in prison is the greatest in Los Angeles. Southern California tends to have a much greater black population in prison compared to other areas in California. The counties in the bay area also have more total black population in jail compared to northern California. My question regarding the graph is: What are some factors that can cause the big total population in prison in these specific areas in California?
 
 
